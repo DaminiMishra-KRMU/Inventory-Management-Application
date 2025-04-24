@@ -3,25 +3,7 @@ Inventory Management System Built with React JS, Node JS, Express JS, MongoDB an
 
 # [<span style="color: blue;">View Live Preview from here.</span>](https://inventory-management-rosy.vercel.app)
 
-### Project Structure  
-Inventory-Management-Application/
-├── backend/                # Backend server (Node.js/Express)
-│   ├── controllers/        # Route handlers
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── .env                # Environment variables
-│   ├── server.js           # Server entry point
-│   └── ...
-├── frontend/               # Frontend application (React)
-│   ├── public/             # Public assets
-│   ├── src/                # Source code
-│   ├── .env                # Environment variables
-│   └── ...
-└── README.md               # Project documentation
-
-### Project Structure 
-
-Clone the repository:
+### Clone the repository:
 
 git clone https://github.com/DaminiMishra-KRMU/Inventory-Management-Application.git
 cd Inventory-Management-Application
