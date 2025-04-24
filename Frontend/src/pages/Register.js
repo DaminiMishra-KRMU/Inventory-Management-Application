@@ -21,7 +21,7 @@ function Register() {
 
   // Register User
   const registerUser = () => {
-    fetch("http://localhost:4000/api/register", {
+    fetch("http://localhost:4001/api/register", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

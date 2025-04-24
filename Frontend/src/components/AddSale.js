@@ -28,7 +28,7 @@ export default function AddSale({
 
   // POST Data
   const addSale = () => {
-    fetch("http://localhost:4000/api/sales/add", {
+    fetch("http://localhost:4001/api/sales/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -179,7 +179,7 @@ export default function AddSale({
                                 handleInputChange(e.target.name, e.target.value)
                               }
                               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                              placeholder="$299"
+                              placeholder="₹299"
                             />
                           </div>
                           <div className="h-fit w-fit">

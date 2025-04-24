@@ -22,19 +22,25 @@ export default function AddStore() {
   const [open, setOpen] = useState(true);
   const cancelButtonRef = useRef(null);
 
-  const addProduct = () => {
-    fetch("http://localhost:4000/api/store/add", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(form),
-    })
-      .then((result) => {
-        alert("STORE ADDED");
-        setOpen(false);
-      })
-      .catch((err) => console.log(err));
+  const addStore = async () => {
+    try {
+      const response = await fetch("http://localhost:4001/api/store/add", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      alert("STORE ADDED");
+      setOpen(false);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   // Uploading image to cloudinary
@@ -232,7 +238,7 @@ export default function AddStore() {
                   <button
                     type="button"
                     className="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3 sm:w-auto"
-                    onClick={addProduct}
+                    onClick={addStore}
                   >
                     Add Store
                   </button>

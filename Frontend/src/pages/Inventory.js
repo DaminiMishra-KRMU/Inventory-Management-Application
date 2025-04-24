@@ -24,7 +24,7 @@ function Inventory() {
 
   // Fetching Data of All Products
   const fetchProductsData = () => {
-    fetch(`http://localhost:4000/api/product/get/${authContext.user}`)
+    fetch(`http://localhost:4001/api/product/get/${authContext.user}`)
       .then((response) => response.json())
       .then((data) => {
         setAllProducts(data);
@@ -34,17 +34,18 @@ function Inventory() {
 
   // Fetching Data of Search Products
   const fetchSearchData = () => {
-    fetch(`http://localhost:4000/api/product/search?searchTerm=${searchTerm}`)
+    fetch(`http://localhost:4001/api/product/search?searchTerm=${searchTerm}`)
       .then((response) => response.json())
       .then((data) => {
         setAllProducts(data);
       })
       .catch((err) => console.log(err));
-  };
+  }; 
+
 
   // Fetching all stores data
   const fetchSalesData = () => {
-    fetch(`http://localhost:4000/api/store/get/${authContext.user}`)
+    fetch(`http://localhost:4001/api/store/get/${authContext.user}`)
       .then((response) => response.json())
       .then((data) => {
         setAllStores(data);
@@ -67,8 +68,8 @@ function Inventory() {
   // Delete item
   const deleteItem = (id) => {
     console.log("Product ID: ", id);
-    console.log(`http://localhost:4000/api/product/delete/${id}`);
-    fetch(`http://localhost:4000/api/product/delete/${id}`)
+    console.log(`http://localhost:4001/api/product/delete/${id}`);
+    fetch(`http://localhost:4001/api/product/delete/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setUpdatePage(!updatePage);
@@ -118,7 +119,7 @@ function Inventory() {
                 </div>
                 <div className="flex flex-col">
                   <span className="font-semibold text-gray-600 text-base">
-                    $2000
+                    ₹2000
                   </span>
                   <span className="font-thin text-gray-400 text-xs">
                     Revenue
@@ -141,7 +142,7 @@ function Inventory() {
                 </div>
                 <div className="flex flex-col">
                   <span className="font-semibold text-gray-600 text-base">
-                    $1500
+                    ₹1500
                   </span>
                   <span className="font-thin text-gray-400 text-xs">Cost</span>
                 </div>

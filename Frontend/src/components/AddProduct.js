@@ -13,6 +13,8 @@ export default function AddProduct({
     name: "",
     manufacturer: "",
     description: "",
+    quantity: "",
+    price: "",
   });
   console.log("----",product)
   const [open, setOpen] = useState(true);
@@ -23,7 +25,7 @@ export default function AddProduct({
   };
 
   const addProduct = () => {
-    fetch("http://localhost:4000/api/product/add", {
+    fetch("http://localhost:4001/api/product/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -126,7 +128,7 @@ export default function AddProduct({
                               placeholder="Ex. Apple"
                             />
                           </div>
-                          {/* <div>
+                          {/*<div>
                             <label
                               for="price"
                               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -163,7 +165,7 @@ export default function AddProduct({
                               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                               placeholder="0 - 999"
                             />
-                          </div> */}
+                          </div>*/}
 
                           <div className="sm:col-span-2">
                             <label

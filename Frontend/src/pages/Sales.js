@@ -19,7 +19,7 @@ function Sales() {
 
   // Fetching Data of All Sales
   const fetchSalesData = () => {
-    fetch(`http://localhost:4000/api/sales/get/${authContext.user}`)
+    fetch(`http://localhost:4001/api/sales/get/${authContext.user}`)
       .then((response) => response.json())
       .then((data) => {
         setAllSalesData(data);
@@ -29,7 +29,7 @@ function Sales() {
 
   // Fetching Data of All Products
   const fetchProductsData = () => {
-    fetch(`http://localhost:4000/api/product/get/${authContext.user}`)
+    fetch(`http://localhost:4001/api/product/get/${authContext.user}`)
       .then((response) => response.json())
       .then((data) => {
         setAllProducts(data);
@@ -39,7 +39,7 @@ function Sales() {
 
   // Fetching Data of All Stores
   const fetchStoresData = () => {
-    fetch(`http://localhost:4000/api/store/get/${authContext.user}`)
+    fetch(`http://localhost:4001/api/store/get/${authContext.user}`)
       .then((response) => response.json())
       .then((data) => {
         setAllStores(data);
@@ -122,7 +122,7 @@ function Sales() {
                       {element.SaleDate}
                     </td>
                     <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                      ${element.TotalSaleAmount}
+                      ₹{element.TotalSaleAmount}
                     </td>
                   </tr>
                 );
